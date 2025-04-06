@@ -1,3 +1,37 @@
+## Bill of Materials
+
+| Qty | Value | Description | Manufacturer Part # | Mouser Link |
+|-----|-------|-------------|----------------------|-------------|
+| 1 | - | ESP32-C6 Module | ESP32-C6-WROOM-1-N8 | [Datasheet](https://www.mouser.co.uk/datasheet/2/891/Espressif_ESP32_C6_WROOM_1__Datasheet_V0_1_PRELIMI-3239987.pdf) |
+| 1 | - | Environmental Sensor | BME688 | [Datasheet](https://www.mouser.co.uk/datasheet/2/783/bst_bme688_fl000-2307034.pdf) |
+| 1 | - | Real Time Clock | DS3231SN# | [Datasheet](https://www.mouser.co.uk/datasheet/2/609/DS3231-3421123.pdf) |
+| 1 | - | MicroSD Card Socket | 112A-TAAR-R03 ATTEND | [Datasheet](https://www.attend.com.tw/data/download/file/112A-TAAR-R03.rar) |
+| 1 | - | USB Type-C Connector | USB4110-GF-A | [Datasheet](https://www.mouser.co.uk/datasheet/2/837/GCT_USB4110_Product_Drawing___20k_cycles-3455479.pdf) |
+| 1 | - | FFC Connector | FH34SRJ-24S-0.5SH | [Datasheet](https://www.mouser.co.uk/datasheet/2/185/FH34SRJ_24S_0_5SH_99__CL0580_1255_6_99_2DDrawing_0-1615044.pdf) |
+| 1 | - | Qwiic Connector | QWIIC_RIGHT_ANGLE | [Datasheet](https://www.mouser.co.uk/datasheet/2/813/Qwiic_Connector_Datasheet-1223982.pdf) |
+| 1 | - | Li-Ion Charge Controller | MCP73831 | [Datasheet](https://www.mouser.co.uk/datasheet/2/268/MCP73831_Family_Data_Sheet_DS20001984H-3441711.pdf) |
+| 1 | - | LDO Regulator | XC6220A331MR-G | [Datasheet](https://www.mouser.co.uk/datasheet/2/760/xc6220-3371556.pdf) |
+| 1 | - | Fuel Gauge IC | MAX17048G+T10 | [Datasheet](https://www.mouser.co.uk/datasheet/2/609/MAX17048_MAX17049-3469099.pdf) |
+| 1 | - | Voltage Detector | BD5229G-TR | [Datasheet](https://fscdn.rohm.com/en/products/databook/datasheet/ic/power/voltage_detector/bd52xxg-e.pdf) |
+| 2 | 20V/4.2A | P-Channel MOSFET | DMG2305UX-7 | [Datasheet](https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf) |
+| 1 | - | N-Channel MOSFET | SI1308EDL-T1-GE3 | [Datasheet](https://www.vishay.com/doc?63399) |
+| 15 | 10kΩ | Resistor | RR0402 | [Datasheet](https://www.mouser.com/ds/2/447/PYu-RC0402_51_RoHS_L_6_r-8721.pdf) |
+| 8 | 100nF | Capacitor | CC0402 | [Datasheet](https://eu.mouser.com/datasheet/2/40/cx5r_KGM-3223198.pdf) |
+| 10 | 1µF/50V | Capacitor | CC0402 | [Datasheet](https://eu.mouser.com/datasheet/2/40/cx5r_KGM-3223198.pdf) |
+| 5 | 4.7µF | Capacitor | CC0402 | [Datasheet](https://eu.mouser.com/datasheet/2/40/cx5r_KGM-3223198.pdf) |
+| 3 | - | Schottky Diode | MBR0530 | [Datasheet](https://www.onsemi.com/PowerSolutions/product.do?id=MBR0530T3G) |
+| 6 | - | TVS Diode | PGB1010603MR | [Datasheet](https://www.littelfuse.com/assetdocs/pulseguard-esd-suppressors-pgb1-datasheet?assetguid=8a337998-d54d-466b-be4e-dc5bcd1f9321) |
+| 1 | 100µF | Polarized Capacitor | CPOL-EUCT3528 | [Datasheet](https://www.mouser.co.uk/datasheet/2/396/mlcc02_e-1307760.pdf) |
+| 1 | - | Inductor | 744043680 | [Datasheet](https://www.we-online.com/components/products/datasheet/744043680.pdf) |
+| 1 | - | ESD Protection Diode | USBLC6-2SC6Y | [Datasheet](https://www.mouser.co.uk/datasheet/2/389/usblc6_2sc6y-1852505.pdf) |
+| 2 | - | Schottky Diode | SD0805S020S1R0 | [Datasheet](https://www.mouser.co.uk/datasheet/2/40/schottky-3165252.pdf) |
+| 1 | - | Supercapacitor | CPH3225A | [Datasheet](https://www.mouser.co.uk/datasheet/2/360/Seiko_Instruments_MicroBattery_E_20230330_2024Jan_-3561061.pdf) |
+| 1 | - | Varistor | ESP32C6_VARISTOR_CT | [Datasheet](https://www.mouser.co.uk/datasheet/2/358/typ_PFMF-1275918.pdf) |
+| 17 | - | Test Points | TPTP20R | [Datasheet](https://www.mouser.co.uk/datasheet/2/215/5265_5269-2935484.pdf) |
+| 1 | - | Solder Jumper | SJ | [Datasheet](https://www.mouser.co.uk/datasheet/2/210/ASC_WR-3314721.pdf) |
+| 1 | - | LED (Green) | ADAFRUIT_LEDCHIP-LED0603 | [Specs](https://www.3dcontentcentral.com/secure/download-model.aspx?catalogid=9481&id=681976) |
+| 3 | - | Custom Buttons | BUTTON_CUSYOMV1 | - |
+
 ## Core Hardware Modules
 
 ### 1. Processing Unit
@@ -75,84 +109,50 @@
 
 | ESP32-C6 Pin    | Component / Function  | Description and Reason for Use                                                                                                               |
 |-----------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| GPIO1 (SDA)     | I2C Bus               | Used for communication with the BME688 sensor, battery fuel gauge IC (MAX17048), and RTC (DS3231). I²C enables multiple devices on one bus. |
-| GPIO2 (SCL)     | I2C Clock             | Provides the clock signal for the I²C bus, synchronizing data transfer between the ESP32-C6 and connected I²C devices.                        |
-| GPIO5 (MISO)    | SPI (E-Paper)         | Master In Slave Out for the SPI interface with the E-Paper display; receives data from the display to the ESP32-C6.                           |
-| GPIO6 (MOSI)    | SPI (E-Paper)         | Master Out Slave In for the SPI interface with the E-Paper display; sends data from the ESP32-C6 to the display.                              |
-| GPIO7 (SCK)     | SPI Clock (E-Paper)   | Provides the clock signal for the SPI interface with the E-Paper display, synchronizing data transfer.                                       |
-| GPIO8 (CS)      | Chip Select (E-Paper) | Selects the E-Paper display for SPI communication, allowing communication with a single SPI device at a time.                                  |
-| GPIO9           | E-Paper DC            | Data/Command control for the E-Paper display, indicating whether the transmitted data is command instructions or display data.                |
-| GPIO10          | E-Paper RST           | Reset pin for the E-Paper display, used to initialize or reset the display.                                                                  |
-| GPIO11          | E-Paper BUSY          | Busy status pin for the E-Paper display, indicating if the display is occupied and cannot receive new commands.                                |
-| GPIO12          | BUTTON_BOOT           | Button to enter programming/bootload mode.                                                                                                 |
-| GPIO13          | BUTTON_RESET          | Button for hardware reset of the ESP32-C6.                                                                                                   |
-| GPIO14          | BUTTON_USER           | User-defined button for application interactions.                                                                                          |
-| GPIO15          | MAX17048 ALERT        | Alert pin from the battery fuel gauge IC, signaling critical battery conditions.                                                           |
-| GPIO16          | USB D+                | Positive data line for the USB interface.                                                                                                  |
-| GPIO17          | USB D-                | Negative data line for the USB interface.                                                                                                  |
-| GPIO18          | STATUS_LED            | Controls the status LED for visual indication of the device state.                                                                           |
-| GPIO19          | SD Card CS            | Chip select for the SD card on the SPI interface.                                                                                          |
-| GPIO20          | SD Card MISO          | Master In Slave Out for the SPI interface with the SD card; receives data from the SD card.                                                  |
-| GPIO21          | SD Card MOSI          | Master Out Slave In for the SPI interface with the SD card; sends data to the SD card.                                                       |
-| GPIO4           | SD Card CLK           | SPI clock for the SD card, synchronizing data transfer.                                                                                    |
+| IO1 (SDA)     | I2C Bus               | Used for communication with the BME688 sensor, battery fuel gauge IC (MAX17048), and RTC (DS3231). I²C enables multiple devices on one bus. |
+| IO2 (SCL)     | I2C Clock             | Provides the clock signal for the I²C bus, synchronizing data transfer between the ESP32-C6 and connected I²C devices.                      |
+| IO5 (MISO)    | SPI (E-Paper)         | Master In Slave Out for the SPI interface with the E-Paper display; receives data from the display to the ESP32-C6.                         |
+| IO6 (MOSI)    | SPI (E-Paper)         | Master Out Slave In for the SPI interface with the E-Paper display; sends data from the ESP32-C6 to the display.                            |
+| IO7 (SCK)     | SPI Clock (E-Paper)   | Provides the clock signal for the SPI interface with the E-Paper display, synchronizing data transfer.                                      |
+| IO8 (CS)      | Chip Select (E-Paper) | Selects the E-Paper display for SPI communication, allowing communication with a single SPI device at a time.                               |
+| IO9           | E-Paper DC            | Data/Command control for the E-Paper display, indicating whether the transmitted data is command instructions or display data.              |
+| IO10          | E-Paper RST           | Reset pin for the E-Paper display, used to initialize or reset the display.                                                                 |
+| IO11          | E-Paper BUSY          | Busy status pin for the E-Paper display, indicating if the display is occupied and cannot receive new commands.                             |
+| IO12          | BUTTON_BOOT           | Button to enter programming/bootload mode.                                                                                                  |
+| IO13          | BUTTON_RESET          | Button for hardware reset of the ESP32-C6.                                                                                                  |
+| IO14          | BUTTON_USER           | User-defined button for application interactions.                                                                                           |
+| IO15          | MAX17048 ALERT        | Alert pin from the battery fuel gauge IC, signaling critical battery conditions.                                                            |
+| GPIO16/TXD0   | USB D+                | Positive data line for the USB interface.                                                                                                   |
+| GPIO17/RXD0   | USB D-                | Negative data line for the USB interface.                                                                                                   |
+| IO18          | STATUS_LED            | Controls the status LED for visual indication of the device state.                                                                          |
+| IO19          | SD Card CS            | Chip select for the SD card on the SPI interface.                                                                                           |
+| IO20          | SD Card MISO          | Master In Slave Out for the SPI interface with the SD card; receives data from the SD card.                                                 |
+| IO21          | SD Card MOSI          | Master Out Slave In for the SPI interface with the SD card; sends data to the SD card.                                                      |
+| IO4           | SD Card CLK           | SPI clock for the SD card, synchronizing data transfer.                                                                                     |
 
-### 3. Additional Details
+###  Additional Details
 
-#### 3.1 I2C Interface
+####   I2C Interface
 The GPIO1 (SDA) and GPIO2 (SCL) pins are used for the I²C bus, connecting the ESP32-C6 to:
 - **BME688 Sensor:** For reading temperature, humidity, pressure, and air quality data.
 - **MAX17048:** For monitoring battery level.
 - **DS3231:** For real-time clock (RTC) functionality.
 
-#### 3.2 SPI Interface
+####   SPI Interface
 The GPIO5, GPIO6, GPIO7, and GPIO8 pins are dedicated to the SPI interface with the E-Paper display. This interface requires:
 - **MISO (GPIO5):** Receives data from the display.
 - **MOSI (GPIO6):** Transmits data to the display.
 - **SCK (GPIO7):** Synchronizes the data transfer.
 - **CS (GPIO8):** Selects the E-Paper display for communication.
 
-#### 3.3 User Buttons
+####  User Buttons
 The GPIO12, GPIO13, and GPIO14 pins are connected to the user control buttons:
 - **GPIO12 (BUTTON_BOOT):** Enters programming/bootload mode.
 - **GPIO13 (BUTTON_RESET):** Resets the ESP32-C6.
 - **GPIO14 (BUTTON_USER):** Allows user-defined interactions.
 
-#### 3.4 USB
+####  USB
 GPIO16 and GPIO17 are used for the USB interface, facilitating data transfer and charging.
 
-#### 3.5 SD Card
+####  SD Card
 The GPIO19, GPIO20, GPIO21, and GPIO4 pins are used for the SPI interface with the SD card, enabling data storage and access.
-
-## Bill of Materials
-
-| Qty | Value | Description | Manufacturer Part # | Mouser Link |
-|-----|-------|-------------|----------------------|-------------|
-| 1 | - | ESP32-C6 Module | ESP32-C6-WROOM-1-N8 | [Datasheet](https://www.mouser.co.uk/datasheet/2/891/Espressif_ESP32_C6_WROOM_1__Datasheet_V0_1_PRELIMI-3239987.pdf) |
-| 1 | - | Environmental Sensor | BME688 | [Datasheet](https://www.mouser.co.uk/datasheet/2/783/bst_bme688_fl000-2307034.pdf) |
-| 1 | - | Real Time Clock | DS3231SN# | [Datasheet](https://www.mouser.co.uk/datasheet/2/609/DS3231-3421123.pdf) |
-| 1 | - | MicroSD Card Socket | 112A-TAAR-R03 ATTEND | [Datasheet](https://www.attend.com.tw/data/download/file/112A-TAAR-R03.rar) |
-| 1 | - | USB Type-C Connector | USB4110-GF-A | [Datasheet](https://www.mouser.co.uk/datasheet/2/837/GCT_USB4110_Product_Drawing___20k_cycles-3455479.pdf) |
-| 1 | - | FFC Connector | FH34SRJ-24S-0.5SH | [Datasheet](https://www.mouser.co.uk/datasheet/2/185/FH34SRJ_24S_0_5SH_99__CL0580_1255_6_99_2DDrawing_0-1615044.pdf) |
-| 1 | - | Qwiic Connector | QWIIC_RIGHT_ANGLE | [Datasheet](https://www.mouser.co.uk/datasheet/2/813/Qwiic_Connector_Datasheet-1223982.pdf) |
-| 1 | - | Li-Ion Charge Controller | MCP73831 | [Datasheet](https://www.mouser.co.uk/datasheet/2/268/MCP73831_Family_Data_Sheet_DS20001984H-3441711.pdf) |
-| 1 | - | LDO Regulator | XC6220A331MR-G | [Datasheet](https://www.mouser.co.uk/datasheet/2/760/xc6220-3371556.pdf) |
-| 1 | - | Fuel Gauge IC | MAX17048G+T10 | [Datasheet](https://www.mouser.co.uk/datasheet/2/609/MAX17048_MAX17049-3469099.pdf) |
-| 1 | - | Voltage Detector | BD5229G-TR | [Datasheet](https://fscdn.rohm.com/en/products/databook/datasheet/ic/power/voltage_detector/bd52xxg-e.pdf) |
-| 2 | 20V/4.2A | P-Channel MOSFET | DMG2305UX-7 | [Datasheet](https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf) |
-| 1 | - | N-Channel MOSFET | SI1308EDL-T1-GE3 | [Datasheet](https://www.vishay.com/doc?63399) |
-| 15 | 10kΩ | Resistor | RR0402 | [Datasheet](https://www.mouser.com/ds/2/447/PYu-RC0402_51_RoHS_L_6_r-8721.pdf) |
-| 8 | 100nF | Capacitor | CC0402 | [Datasheet](https://eu.mouser.com/datasheet/2/40/cx5r_KGM-3223198.pdf) |
-| 10 | 1µF/50V | Capacitor | CC0402 | [Datasheet](https://eu.mouser.com/datasheet/2/40/cx5r_KGM-3223198.pdf) |
-| 5 | 4.7µF | Capacitor | CC0402 | [Datasheet](https://eu.mouser.com/datasheet/2/40/cx5r_KGM-3223198.pdf) |
-| 3 | - | Schottky Diode | MBR0530 | [Datasheet](https://www.onsemi.com/PowerSolutions/product.do?id=MBR0530T3G) |
-| 6 | - | TVS Diode | PGB1010603MR | [Datasheet](https://www.littelfuse.com/assetdocs/pulseguard-esd-suppressors-pgb1-datasheet?assetguid=8a337998-d54d-466b-be4e-dc5bcd1f9321) |
-| 1 | 100µF | Polarized Capacitor | CPOL-EUCT3528 | [Datasheet](https://www.mouser.co.uk/datasheet/2/396/mlcc02_e-1307760.pdf) |
-| 1 | - | Inductor | 744043680 | [Datasheet](https://www.we-online.com/components/products/datasheet/744043680.pdf) |
-| 1 | - | ESD Protection Diode | USBLC6-2SC6Y | [Datasheet](https://www.mouser.co.uk/datasheet/2/389/usblc6_2sc6y-1852505.pdf) |
-| 2 | - | Schottky Diode | SD0805S020S1R0 | [Datasheet](https://www.mouser.co.uk/datasheet/2/40/schottky-3165252.pdf) |
-| 1 | - | Supercapacitor | CPH3225A | [Datasheet](https://www.mouser.co.uk/datasheet/2/360/Seiko_Instruments_MicroBattery_E_20230330_2024Jan_-3561061.pdf) |
-| 1 | - | Varistor | ESP32C6_VARISTOR_CT | [Datasheet](https://www.mouser.co.uk/datasheet/2/358/typ_PFMF-1275918.pdf) |
-| 17 | - | Test Points | TPTP20R | [Datasheet](https://www.mouser.co.uk/datasheet/2/215/5265_5269-2935484.pdf) |
-| 1 | - | Solder Jumper | SJ | [Datasheet](https://www.mouser.co.uk/datasheet/2/210/ASC_WR-3314721.pdf) |
-| 1 | - | LED (Green) | ADAFRUIT_LEDCHIP-LED0603 | [Specs](https://www.3dcontentcentral.com/secure/download-model.aspx?catalogid=9481&id=681976) |
-| 3 | - | Custom Buttons | BUTTON_CUSYOMV1 | - |
