@@ -1,3 +1,77 @@
+## Core Hardware Modules
+
+### 1. Processing Unit
+- **ESP32-C6-WROOM-1-N8**  
+  - **Key Features**:
+    - 160MHz RISC-V single-core processor
+    - 512KB SRAM + 8MB external flash
+    - Wi-Fi 6 (802.11ax) and Bluetooth 5 LE
+    - Ultra-low-power modes (<5µA deep sleep)
+  - **Functions**:
+    - Manages all peripheral communication
+    - Handles e-book rendering and UI operations
+    - Processes environmental sensor data
+    - Manages power states and battery charging
+
+### 2. Display System
+- **7.5" E-Paper Display (WSH-13187)**
+  - **Specifications**:
+    - 800×480 resolution, 8:1 contrast ratio
+    - SPI interface (4-wire) @ 10MHz max
+    - Partial refresh (<0.5s), full refresh (<1s)
+    - 170° viewing angle
+  - **Power Management**:
+    - 0W power consumption when static
+    - 120mW during refresh (active)
+
+### 3. Environmental Sensing
+- **BME688 Integrated Sensor**
+  - **Measurement Capabilities**:
+    - Temperature: ±1°C accuracy (0-65°C)
+    - Humidity: ±3% RH (20-80% RH)
+    - Pressure: ±1 hPa (300-1100 hPa)
+    - Air Quality: VOC and eCO2 detection
+  - **Interface**:
+    - I2C @ 400kHz
+    - 30s warm-up time for accurate readings
+  - **Power Consumption**:
+    - 2mA during active measurement
+    - 0.5µA in sleep mode
+
+### 4. Power Management System
+| Component | Function | Specifications |
+|-----------|----------|----------------|
+| **2500mAh LiPo Battery** | Primary power source | 3.7V nominal, 2C discharge rate |
+| **MCP73831** | Battery charging | 500mA max charge current, 4.2V regulation |
+| **MAX17048** | Fuel gauge | ±1% voltage accuracy, I2C interface |
+| **XC6220A331MR-G** | Voltage regulator | 3.3V @ 300mA, 50µA quiescent current |
+
+### 5. User Interface Components
+- **Tactile Buttons (3x)**
+  - Panasonic EVQ-Q2A03W switches
+  - 1M cycle lifespan
+  - Hardware-debounced (RC filters)
+- **LED Indicators**:
+  - Charging status (red/green)
+  - System activity (blue)
+
+### 6. Connectivity
+- **USB-C Port (Amphenol 12401641E4R)**
+  - USB 2.0 Full Speed (12Mbps)
+  - 5V/1A charging
+  - ESD protection (USBLC6-2SC6Y)
+- **Wi-Fi 6**:
+  - 20MHz channel bandwidth
+  - WPA3 security support
+  - OTA update capability
+
+### 7. Memory & Storage
+| Component | Type | Capacity | Interface |
+|-----------|------|----------|-----------|
+| **W25Q512JVEIQ** | SPI Flash | 512Mb (64MB) | Quad-SPI @ 133MHz |
+| **MicroSD Slot** | Expandable | Up to 1TB | SPI @ 25MHz |
+
+
 ## Bill of Materials
 
 | Qty | Value | Description | Manufacturer Part # | Mouser Link |
