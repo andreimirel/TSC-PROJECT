@@ -71,6 +71,37 @@
 | **W25Q512JVEIQ** | SPI Flash | 512Mb (64MB) | Quad-SPI @ 133MHz |
 | **MicroSD Slot** | Expandable | Up to 1TB | SPI @ 25MHz |
 
+## ESP32-C6 Pins
+
+| Pin Number | Pin Name         | Function                                  | Notes                                                                    |
+|------------|-------------------|-------------------------------------------|--------------------------------------------------------------------------|
+| 1          | GND               | Ground                                    | Ground connection                                                        |
+| 2          | 3V3               | 3.3V Power Supply                         | Power supply for the module                                              |
+| 3          | RESET             | Reset                                     | Module reset                                                             |
+| 4          | SS_SD             | Slave Select (SD card)                   | Slave select for SD card communication                                    |
+| 5          | EPD_DC            | Data/Command (EPD)                       | Data/command selection for EPD display                                    |
+| 6          | -                 | -                                         | -                                                                        |
+| 7          | SCK               | Serial Clock                             | Serial clock for SPI communication                                        |
+| 8          | INT_RTC           | Interrupt (RTC)                          | Interrupt from Real-Time Clock (RTC)                                      |
+| 9          | 32KHZ             | 32kHz Clock                              | 32kHz clock signal                                                        |
+| 10         | IO/BOOT           | Input/Output / Boot mode select          | Input/output with boot mode selection                                     |
+| 11         | EPD_CS            | Chip Select (EPD)                        | Chip select for EPD display                                               |
+| 12         | -                 | -                                         | -                                                                        |
+| 13         | FLASH_CS          | Chip Select (Flash)                      | Chip select for flash memory                                              |
+| 14         | USB_D-            | USB Data -                               | USB data negative                                                         |
+| 15         | -                 | -                                         | -                                                                        |
+| 16         | RTC_RST           | Reset (RTC)                              | Real-Time Clock (RTC) reset                                               |
+| 17         | -                 | -                                         | -                                                                        |
+| 18         | EPD_3V3_C         | EPD 3.3V Control                         | 3.3V power control for EPD display                                        |
+| 19         | SDA               | Serial Data (I2C)                        | Serial data for I2C communication                                         |
+| 20         | SCL               | Serial Clock (I2C)                       | Serial clock for I2C communication                                        |
+| 21         | EPD_RST           | Reset (EPD)                              | EPD display reset                                                         |
+| 22         | NC                | Not Connected                            | Pin not connected                                                         |
+| 23         | USB_D+            | USB Data +                               | USB data positive                                                         |
+| 24         | RXD0 / GPIO17     | Receiver (UART0) / General Purpose I/O 17 | UART0 receiver / General Purpose Input/Output 17                         |
+| 25         | TXD0 / GPIO16     | Transmitter (UART0) / General Purpose I/O 16 | UART0 transmitter / General Purpose Input/Output 16                   |
+| 26         | EPD_BUSY          | Busy (EPD)                               | Busy signal from EPD display                                              |
+| 27         | MISO              | Master In Slave Out (SPI)                | Master In Slave Out for SPI communication                                 |
 
 ## Bill of Materials
 
