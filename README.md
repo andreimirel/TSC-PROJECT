@@ -24,10 +24,10 @@
 | 1 | 100µF | Polarized Capacitor | 3528 | [Link](https://www.mouser.co.uk/datasheet/2/396/mlcc02_e-1307760.pdf) |
 | 1 | 744043680 | Inductor | 4828 | [link](https://www.we-online.com/components/products/datasheet/744043680.pdf) |
 | 1 | ESD Protection Diode | USBLC6-2SC6Y | [Link](https://www.mouser.co.uk/datasheet/2/389/usblc6_2sc6y-1852505.pdf) |
-| 2 | - | - | Schottky Diode | SD0805S020S1R0 | [Link](https://www.mouser.co.uk/datasheet/2/40/schottky-3165252.pdf) |
-| 1 | - | - | Supercapacitor | CPH3225A | [Link](https://www.mouser.co.uk/datasheet/2/360/Seiko_Instruments_MicroBattery_E_20230330_2024Jan_-3561061.pdf) |
-| 1 | - | - | Varistor | ESP32C6_VARISTOR_CT | [Link](https://www.mouser.co.uk/datasheet/2/358/typ_PFMF-1275918.pdf) |
-| 3 | - | - | Custom Buttons | BUTTON_CUSYOMV1 | - |
-| 17 | - | - | Test Points | TPTP20R | [Link](https://www.mouser.co.uk/datasheet/2/215/5265_5269-2935484.pdf) |
-| 1 | - | - | Solder Jumper | SJ | [Link](https://www.mouser.co.uk/datasheet/2/210/ASC_WR-3314721.pdf) |
-| 1 | - | - |  LED (Green) | ADAFRUIT_LEDCHIP-LED0603 | [Link](https://www.3dcontentcentral.com/secure/download-model.aspx?catalogid=9481&id=681976) |
+| 2 | - | Schottky Diode | SD0805S020S1R0 | [Link](https://www.mouser.co.uk/datasheet/2/40/schottky-3165252.pdf) |
+| 1 | - | Supercapacitor | CPH3225A | [Link](https://www.mouser.co.uk/datasheet/2/360/Seiko_Instruments_MicroBattery_E_20230330_2024Jan_-3561061.pdf) |
+| 1 | - | Varistor | ESP32C6_VARISTOR_CT | [Link](https://www.mouser.co.uk/datasheet/2/358/typ_PFMF-1275918.pdf) |
+| 3 | - | Custom Buttons | BUTTON_CUSYOMV1 | - |
+| 17 | - | Test Points | TPTP20R | [Link](https://www.mouser.co.uk/datasheet/2/215/5265_5269-2935484.pdf) |
+| 1 | - |  Solder Jumper | SJ | [Link](https://www.mouser.co.uk/datasheet/2/210/ASC_WR-3314721.pdf) |
+| 1 | - | LED (Green) | ADAFRUIT_LEDCHIP-LED0603 | [Link](https://www.3dcontentcentral.com/secure/download-model.aspx?catalogid=9481&id=681976) |
