@@ -1,3 +1,9 @@
+## General description
+  The OpenBook E-Reader is an open-source e-reader device offering a distraction-free reading experience with physical buttons and a minimalist interface. It features environmental sensors that provide real-time environmental data, a sustainable design, and extended battery life of at least one week. The device boasts a large e-paper display, slim ergonomic design, and USB-C connectivity for charging and data transfer. OpenBook supports wireless ebook downloads and emphasizes customizable hardware and software for the tech-savvy reader. It aims to serve avid readers who value open-source technology, customization options, and environmental awareness.
+
+## Block Diagram
+![image-2](https://imgur.com/a/KbbQZAz)
+
 ## Bill of Materials
 
 | Qty | Value | Description | Manufacturer Part # | Mouser Link |
