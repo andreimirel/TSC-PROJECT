@@ -73,35 +73,55 @@
 
 ## ESP32-C6 Pins
 
-| Pin Number | Pin Name         | Function                                  | Notes                                                                    |
-|------------|-------------------|-------------------------------------------|--------------------------------------------------------------------------|
-| 1          | GND               | Ground                                    | Ground connection                                                        |
-| 2          | 3V3               | 3.3V Power Supply                         | Power supply for the module                                              |
-| 3          | RESET             | Reset                                     | Module reset                                                             |
-| 4          | SS_SD             | Slave Select (SD card)                   | Slave select for SD card communication                                    |
-| 5          | EPD_DC            | Data/Command (EPD)                       | Data/command selection for EPD display                                    |
-| 6          | -                 | -                                         | -                                                                        |
-| 7          | SCK               | Serial Clock                             | Serial clock for SPI communication                                        |
-| 8          | INT_RTC           | Interrupt (RTC)                          | Interrupt from Real-Time Clock (RTC)                                      |
-| 9          | 32KHZ             | 32kHz Clock                              | 32kHz clock signal                                                        |
-| 10         | IO/BOOT           | Input/Output / Boot mode select          | Input/output with boot mode selection                                     |
-| 11         | EPD_CS            | Chip Select (EPD)                        | Chip select for EPD display                                               |
-| 12         | -                 | -                                         | -                                                                        |
-| 13         | FLASH_CS          | Chip Select (Flash)                      | Chip select for flash memory                                              |
-| 14         | USB_D-            | USB Data -                               | USB data negative                                                         |
-| 15         | -                 | -                                         | -                                                                        |
-| 16         | RTC_RST           | Reset (RTC)                              | Real-Time Clock (RTC) reset                                               |
-| 17         | -                 | -                                         | -                                                                        |
-| 18         | EPD_3V3_C         | EPD 3.3V Control                         | 3.3V power control for EPD display                                        |
-| 19         | SDA               | Serial Data (I2C)                        | Serial data for I2C communication                                         |
-| 20         | SCL               | Serial Clock (I2C)                       | Serial clock for I2C communication                                        |
-| 21         | EPD_RST           | Reset (EPD)                              | EPD display reset                                                         |
-| 22         | NC                | Not Connected                            | Pin not connected                                                         |
-| 23         | USB_D+            | USB Data +                               | USB data positive                                                         |
-| 24         | RXD0 / GPIO17     | Receiver (UART0) / General Purpose I/O 17 | UART0 receiver / General Purpose Input/Output 17                         |
-| 25         | TXD0 / GPIO16     | Transmitter (UART0) / General Purpose I/O 16 | UART0 transmitter / General Purpose Input/Output 16                   |
-| 26         | EPD_BUSY          | Busy (EPD)                               | Busy signal from EPD display                                              |
-| 27         | MISO              | Master In Slave Out (SPI)                | Master In Slave Out for SPI communication                                 |
+| ESP32-C6 Pin    | Component / Function  | Description and Reason for Use                                                                                                               |
+|-----------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| GPIO1 (SDA)     | I2C Bus               | Used for communication with the BME688 sensor, battery fuel gauge IC (MAX17048), and RTC (DS3231). I²C enables multiple devices on one bus. |
+| GPIO2 (SCL)     | I2C Clock             | Provides the clock signal for the I²C bus, synchronizing data transfer between the ESP32-C6 and connected I²C devices.                        |
+| GPIO5 (MISO)    | SPI (E-Paper)         | Master In Slave Out for the SPI interface with the E-Paper display; receives data from the display to the ESP32-C6.                           |
+| GPIO6 (MOSI)    | SPI (E-Paper)         | Master Out Slave In for the SPI interface with the E-Paper display; sends data from the ESP32-C6 to the display.                              |
+| GPIO7 (SCK)     | SPI Clock (E-Paper)   | Provides the clock signal for the SPI interface with the E-Paper display, synchronizing data transfer.                                       |
+| GPIO8 (CS)      | Chip Select (E-Paper) | Selects the E-Paper display for SPI communication, allowing communication with a single SPI device at a time.                                  |
+| GPIO9           | E-Paper DC            | Data/Command control for the E-Paper display, indicating whether the transmitted data is command instructions or display data.                |
+| GPIO10          | E-Paper RST           | Reset pin for the E-Paper display, used to initialize or reset the display.                                                                  |
+| GPIO11          | E-Paper BUSY          | Busy status pin for the E-Paper display, indicating if the display is occupied and cannot receive new commands.                                |
+| GPIO12          | BUTTON_BOOT           | Button to enter programming/bootload mode.                                                                                                 |
+| GPIO13          | BUTTON_RESET          | Button for hardware reset of the ESP32-C6.                                                                                                   |
+| GPIO14          | BUTTON_USER           | User-defined button for application interactions.                                                                                          |
+| GPIO15          | MAX17048 ALERT        | Alert pin from the battery fuel gauge IC, signaling critical battery conditions.                                                           |
+| GPIO16          | USB D+                | Positive data line for the USB interface.                                                                                                  |
+| GPIO17          | USB D-                | Negative data line for the USB interface.                                                                                                  |
+| GPIO18          | STATUS_LED            | Controls the status LED for visual indication of the device state.                                                                           |
+| GPIO19          | SD Card CS            | Chip select for the SD card on the SPI interface.                                                                                          |
+| GPIO20          | SD Card MISO          | Master In Slave Out for the SPI interface with the SD card; receives data from the SD card.                                                  |
+| GPIO21          | SD Card MOSI          | Master Out Slave In for the SPI interface with the SD card; sends data to the SD card.                                                       |
+| GPIO4           | SD Card CLK           | SPI clock for the SD card, synchronizing data transfer.                                                                                    |
+
+### 3. Additional Details
+
+#### 3.1 I2C Interface
+The GPIO1 (SDA) and GPIO2 (SCL) pins are used for the I²C bus, connecting the ESP32-C6 to:
+- **BME688 Sensor:** For reading temperature, humidity, pressure, and air quality data.
+- **MAX17048:** For monitoring battery level.
+- **DS3231:** For real-time clock (RTC) functionality.
+
+#### 3.2 SPI Interface
+The GPIO5, GPIO6, GPIO7, and GPIO8 pins are dedicated to the SPI interface with the E-Paper display. This interface requires:
+- **MISO (GPIO5):** Receives data from the display.
+- **MOSI (GPIO6):** Transmits data to the display.
+- **SCK (GPIO7):** Synchronizes the data transfer.
+- **CS (GPIO8):** Selects the E-Paper display for communication.
+
+#### 3.3 User Buttons
+The GPIO12, GPIO13, and GPIO14 pins are connected to the user control buttons:
+- **GPIO12 (BUTTON_BOOT):** Enters programming/bootload mode.
+- **GPIO13 (BUTTON_RESET):** Resets the ESP32-C6.
+- **GPIO14 (BUTTON_USER):** Allows user-defined interactions.
+
+#### 3.4 USB
+GPIO16 and GPIO17 are used for the USB interface, facilitating data transfer and charging.
+
+#### 3.5 SD Card
+The GPIO19, GPIO20, GPIO21, and GPIO4 pins are used for the SPI interface with the SD card, enabling data storage and access.
 
 ## Bill of Materials
 
