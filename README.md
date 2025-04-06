@@ -138,29 +138,29 @@
 | IO21          | SD Card MOSI          | Master Out Slave In for the SPI interface with the SD card; sends data to the SD card.                                                      |
 | IO4           | SD Card CLK           | SPI clock for the SD card, synchronizing data transfer.                                                                                     |
 
-  ###  Additional Details
+###  Additional Details - ESP32-C6 Pins
   
-    ####   I2C Interface
+  ####   I2C Interface
       The GPIO1 (SDA) and GPIO2 (SCL) pins are used for the I²C bus, connecting the ESP32-C6 to:
         - **BME688 Sensor:** For reading temperature, humidity, pressure, and air quality data.
         - **MAX17048:** For monitoring battery level.
         - **DS3231:** For real-time clock (RTC) functionality.
     
-    ####   SPI Interface
+  ####   SPI Interface
       The GPIO5, GPIO6, GPIO7, and GPIO8 pins are dedicated to the SPI interface with the E-Paper display. This interface requires:
         - **MISO (GPIO5):** Receives data from the display.
         - **MOSI (GPIO6):** Transmits data to the display.
         - **SCK (GPIO7):** Synchronizes the data transfer.
         - **CS (GPIO8):** Selects the E-Paper display for communication.
     
-    ####  User Buttons
+  ####  User Buttons
       The GPIO12, GPIO13, and GPIO14 pins are connected to the user control buttons:
         - **GPIO12 (BUTTON_BOOT):** Enters programming/bootload mode.
         - **GPIO13 (BUTTON_RESET):** Resets the ESP32-C6.
         - **GPIO14 (BUTTON_USER):** Allows user-defined interactions.
     
-    ####  USB
+  ####  USB
       GPIO16 and GPIO17 are used for the USB interface, facilitating data transfer and charging.
     
-    ####  SD Card
+  ####  SD Card
       The GPIO19, GPIO20, GPIO21, and GPIO4 pins are used for the SPI interface with the SD card, enabling data storage and access.
