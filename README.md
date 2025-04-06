@@ -152,7 +152,7 @@
       - **GPIO14 (BUTTON_USER):** Allows user-defined interactions.
   
   ####  USB
-  GPIO16 and GPIO17 are used for the USB interface, facilitating data transfer and charging.
+    GPIO16 and GPIO17 are used for the USB interface, facilitating data transfer and charging.
   
   ####  SD Card
-  The GPIO19, GPIO20, GPIO21, and GPIO4 pins are used for the SPI interface with the SD card, enabling data storage and access.
+    The GPIO19, GPIO20, GPIO21, and GPIO4 pins are used for the SPI interface with the SD card, enabling data storage and access.
