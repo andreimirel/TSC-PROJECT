@@ -22,7 +22,7 @@
 | 3 | - | Schottky Diode | MBR0530 | [Datasheet](https://www.onsemi.com/PowerSolutions/product.do?id=MBR0530T3G) |
 | 6 | - | TVS Diode | PGB1010603MR | [Datasheet](https://www.littelfuse.com/assetdocs/pulseguard-esd-suppressors-pgb1-datasheet?assetguid=8a337998-d54d-466b-be4e-dc5bcd1f9321) |
 | 1 | 100µF | Polarized Capacitor | CPOL-EUCT3528 | [Datasheet](https://www.mouser.co.uk/datasheet/2/396/mlcc02_e-1307760.pdf) |
-| 1 | 744043680 | Inductor | WE-TPC | [Datasheet](https://www.we-online.com/components/products/datasheet/744043680.pdf) |
+| 1 | - | Inductor | 744043680 | [Datasheet](https://www.we-online.com/components/products/datasheet/744043680.pdf) |
 | 1 | - | ESD Protection Diode | USBLC6-2SC6Y | [Datasheet](https://www.mouser.co.uk/datasheet/2/389/usblc6_2sc6y-1852505.pdf) |
 | 2 | - | Schottky Diode | SD0805S020S1R0 | [Datasheet](https://www.mouser.co.uk/datasheet/2/40/schottky-3165252.pdf) |
 | 1 | - | Supercapacitor | CPH3225A | [Datasheet](https://www.mouser.co.uk/datasheet/2/360/Seiko_Instruments_MicroBattery_E_20230330_2024Jan_-3561061.pdf) |
